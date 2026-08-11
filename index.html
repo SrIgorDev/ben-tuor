@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEN TUOR</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <img src="imgs/header.png" alt="header">
+    
+            <div class="leaf" id="leaf1">
+                <img src="imgs/Monstera_leaf.png" alt="Monstera_leaf">
+            </div>
+            
+            <div class="frame" id="frame1" onclick="openView(1)">
+                <img src="imgs/frame1.png" alt="">
+            </div>
+            <div class="frame" id="frame2" onclick="openView(2)">
+                <img src="imgs/frame2.png" alt="">
+            </div>
+            <div class="frame" id="frame3" onclick="openView(3)">
+                <img src="imgs/frame3.png" alt="">
+            </div>
+    
+            <div class="leaf" id="leaf2">
+                <img src="imgs/Monstera_leaf.png" alt="Monstera_leaf">
+            </div>
+        </header>
+    
+        <main>
+            <h1>FALTAM:</h1>
+            <div class="counter">
+                <div class="field">
+                    <p class="time" id="days">60</p>
+                    <p class="title">DIAS</p>
+                </div>
+                <div class="divisor"></div>
+                <div class="field">
+                    <p class="time" id="hours">05</p>
+                    <p class="title">HORAS</p>
+                </div>
+                <div class="divisor"></div>
+                <div class="field">
+                    <p class="time" id="minutes">42</p>
+                    <p class="title">MINUTOS</p>
+                </div>
+                <div class="divisor"></div>
+                <div class="field">
+                    <p class="time" id="seconds">13</p>
+                    <p class="title">SEGUNDOS</p>
+                </div>
+            </div>
+            <div class="main-footer">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                    </svg>
+                </div>
+                <div class="content">
+                    <h2>DATA DO EVENTO:</h2>
+                    <P>09 DE OUTUBRO</P>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <svg class="sandals" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path d="M10.5 18.3V5.814c0-1.587-.456-2.893-2.383-2.81c-1.608.069-3.116.893-4.312 1.89c-2.142 1.784-2.08 3.866-1.336 6.308l2.384 7.839C5.206 20.2 6.335 21 7.62 21c1.59 0 2.879-1.209 2.879-2.7m3.001 0V5.814c0-1.587.456-2.893 2.383-2.81c1.608.069 3.116.893 4.313 1.89c2.141 1.784 2.078 3.866 1.335 6.308l-2.384 7.839C18.794 20.2 17.665 21 16.38 21c-1.59 0-2.879-1.209-2.879-2.7"/>
+                <path d="M3 13c0-1 .7-3.7 3.5-4.5m0 0c2.5.5 3.5 1.5 4 2m-4-2V7M21 13c0-1-.7-3.7-3.5-4.5m0 0c-2.5.5-3.5 1.5-4 2m4-2V7"/>
+            </g></svg>
+            <h2>VEM AÍ DIAS INCRÍVEIS EM JACUÍPE! <span>♡</span></h2>
+        </footer>
+    </div>
+
+    <dialog id="img-modal">
+        <div class="img-view">
+            <img id="image-view" src="imgs/frame1.png" alt="frame 1">
+            <button onclick="closeView()">Fechar</button>
+        </div>
+    </dialog>
+
+    <script>
+        const targetDate = new Date("2026-10-09T00:00:00").getTime();
+        const counter_days = document.querySelector("#days");
+        const counter_hours = document.querySelector("#hours");
+        const counter_min = document.querySelector("#minutes");
+        const counter_sec = document.querySelector("#seconds");
+
+        function updateCounter(){
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff < 0) {
+                counter_days.innerText = "00";
+                counter_hours.innerText = "00";
+                counter_min.innerText = "00";
+                counter_sec.innerText = "00";
+                clearInterval(interval);
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            counter_days.innerText = String(days).padStart(2, "0");
+            counter_hours.innerText = String(hours).padStart(2, "0");
+            counter_min.innerText = String(minutes).padStart(2, "0");
+            counter_sec.innerText = String(seconds).padStart(2, "0");
+        }
+        updateCounter()
+        const interval = setInterval(updateCounter, 1000);
+
+        function openView(id){
+            const dialog = document.querySelector("#img-modal");
+            const img = document.querySelector("#image-view");
+
+            img.src = `imgs/frame${id}.png`;
+            dialog.showModal();
+        }
+        function closeView(){
+            const dialog = document.querySelector("#img-modal");
+            dialog.close()
+        }
+    </script>
+</body>
+</html>

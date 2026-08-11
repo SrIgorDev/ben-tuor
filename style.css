@@ -1,0 +1,393 @@
+@charset "UTF-8";
+
+:root {
+    --font1: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font2: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --color-main: #002a50;
+    --color-main-light: #175a99;
+    --color-side: #f69e02;
+    --color-side2: #789707;
+
+    --color-bg: #f4d7b7;
+
+    --color-text: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--color-bg);
+    font-family: var(--font1);
+}
+
+.leaf-bg {
+    width: 150px;
+    position: absolute;
+
+    top: 85%;
+    left: 95%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+    overflow: hidden;
+}
+
+.leaf-bg#leaf0 {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template: 3fr 2fr 1fr / 1fr;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+}
+
+header > img {
+    width: 100%;
+    height: 80%;
+
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+
+/* frames */
+
+.frame {
+    padding: 5px;
+    
+    position: absolute;
+
+    background-color: white;
+
+    box-shadow: 0 0 10px #0007;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.frame img {
+    width: 100%;
+}
+
+.frame#frame1 {
+    width: 25%;
+
+    top: 75%;
+    left: 25%;
+
+    transform: translate(-50%, -50%) rotateZ(-5deg);
+    transition: width .5s;
+}
+
+.frame#frame2 {
+    width: 25%;
+
+    top: 77%;
+    left: 75%;
+
+    transform: translate(-50%, -50%) rotateZ(6deg);
+    transition: width .4s;
+}
+
+#frame1:hover, #frame2:hover {
+    width: 30%;
+    z-index: 1;
+}
+
+#frame1:active, #frame2:active {
+    width: 20%;
+}
+
+.frame#frame3 {
+    width: 35%;
+
+    top: 75%;
+    left: 50%;
+    
+    transition: width .5s;
+    animation: balance 10s ease-in-out infinite;
+}
+
+#frame3:hover {
+    width: 40%;
+}
+
+#frame3:active {
+    width: 35%;
+}
+
+@keyframes balance {
+    0% { transform: translate(-55%, -50%) rotate(4deg); }
+    50% { transform: translate(-45%, -55%) rotate(-5deg); }
+    100% { transform: translate(-55%, -50%) rotate(4deg); }
+}
+
+.leaf {
+    width: 12%;
+
+    position: absolute;
+}
+
+.leaf img {
+    width: 100%;
+}
+
+.leaf#leaf1 {
+    top: 82%;
+    left: 90%;
+
+    transform: translate(-50%, -50%) rotateZ(100deg);
+}
+.leaf#leaf2 {
+    top: 84%;
+    left: 11%;
+
+    transform: translate(-50%, -50%) rotateZ(5deg);
+}
+
+
+
+/* MAIN */
+
+main {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+main > h1 {
+    color: var(--color-main);
+    font-family: var(--font1);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* counter */
+.counter {
+    width: 450px;
+    height: 100px;
+
+    margin: 10px auto;
+
+
+    border-left: 3px solid var(--color-side2);
+    border-radius: 16px;
+
+    background: var(--color-main);
+
+    color: var(--color-text);
+
+    display: flex;
+    justify-content: space-evenly;
+
+    transition: border-left .5s;
+}
+
+.counter:hover {
+    border-left: 8px solid var(--color-side2);
+}
+
+.field {
+    width: 25%;
+    display: flex;
+
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    color: var(--color-side);
+    font-family: var(--font2);
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.field > .title {
+    font-family: var(--font2);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.divisor {
+    height: 70%;
+    border-right: 1px dashed var(--color-side2);
+
+    align-self: center;
+}
+
+/* main footer */
+
+.main-footer {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer .icon {
+    width: 40px;
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background-color: var(--color-main);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer .icon svg {
+    width: 100%;
+    color: var(--color-bg);
+}
+
+.main-footer .content {
+    font-family: var(--font1);
+}
+
+.main-footer .content > h2 {
+    color: var(--color-main);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.main-footer .content > p {
+    color: var(--color-side);
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    overflow: hidden;
+}
+
+footer > h2 {
+    position: relative;
+
+    color: var(--color-main);
+    font-family: 'Permanent Marker';
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+footer > h2 > span {
+    position: absolute;
+    color: var(--color-side2);
+    font-size: 1.4em;
+
+    top: 40%;
+
+    transform: rotateZ(15deg) translateY(-50%);
+}
+
+.sandals {
+    width: 40px;
+    height: 40px;
+
+    transform: rotateZ(35deg);
+
+    color: var(--color-main-light);
+}
+
+/* dialog */
+
+dialog {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: none;
+    border-radius: 18px;
+
+    background-color: var(--color-bg);
+
+    transform: translate(-50%, -50%);    
+}
+
+dialog::backdrop{
+    background-color: #000A;
+}
+
+.img-view {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-view img {
+    width: 80%;
+        
+    border-radius: 8px;
+
+    box-shadow: 0 0 10px #000A;
+}
+
+.img-view button {
+    width: 50%;
+    height: 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--color-main);
+
+    box-shadow: 2px 2px 5px #0006;
+
+    color: var(--color-text);
+    font-family: var(--font2);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.img-view button:focus {
+    outline: none;
+}
+
+.img-view button:active {
+    box-shadow: none;
+    margin: 2px 0 0 2px;
+}
