@@ -52,7 +52,7 @@ body {
     height: 100%;
 
     display: grid;
-    grid-template: 3fr 2fr 1fr / 1fr;
+    grid-template: 3fr 2fr min-content / 1fr;
 }
 
 /* HEADER */
